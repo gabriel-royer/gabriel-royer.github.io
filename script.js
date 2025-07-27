@@ -45,3 +45,16 @@ document.querySelectorAll(".project").forEach((project) => {
         });
     }
 });
+
+// Script pour le menu burger responsive
+
+document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+
+    if (burger && nav) {
+        burger.addEventListener('click', function () {
+            nav.classList.toggle('open');
+        });
+    }
+});
