@@ -51,7 +51,7 @@ document.querySelectorAll(".project").forEach((project) => {
 document.addEventListener('DOMContentLoaded', function () {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('nav');
-    const navLinks = nav ? nav.querySelectorAll('ul a') : [];
+    const navLinks = document.querySelectorAll('#main-menu a');
 
     if (burger && nav) {
         burger.addEventListener('click', function () {
