@@ -1,17 +1,23 @@
 :root {
-    --color-bg: #f9f9f9;
+    --color-bg: #f5f7fa;
     --color-text: #222;
-    --color-primary: #0044cc;
-    --color-accent: #0099ff;
+    --color-primary: #003366;
+    --color-accent: #00a3c4;
+    --color-hero-bg: #f5f7fa;
     --color-header: #ffffff;
-    --color-dark-bg: #1c1c1c;
+    --color-dark-bg: #121212;
     --color-dark-text: #eaeaea;
 }
 
 body.dark-mode {
     --color-bg: var(--color-dark-bg);
     --color-text: var(--color-dark-text);
-    --color-header: #2a2a2a;
+    --color-header: #1a1a1a;
+    --color-hero-bg: #1e1e1e;
+}
+
+.hero-content .subtitle {
+    color: var(--color-dark-text);
 }
 
 body {
@@ -85,21 +91,38 @@ nav a:hover {
 }
 
 #hero {
+    background: var(--color-hero-bg, #f5f7fa);
+    color: var(--color-text);
+    padding: 6rem 1rem 5rem;
     text-align: center;
-    padding: 3rem 1rem;
-    background: linear-gradient(to right, var(--color-primary), var(--color-accent));
-    color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content .subtitle {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #555;
 }
 
 .cta {
-    background: white;
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: white;
     padding: 0.75rem 1.5rem;
-    border-radius: 999px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
-    margin-top: 1rem;
-    display: inline-block;
+    font-weight: 600;
+    transition: background 0.2s ease-in-out;
+}
+
+.cta:hover {
+    background: #003399;
 }
 
 section {
@@ -190,4 +213,16 @@ footer {
     nav ul {
         flex-direction: column;
     }
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: var(--color-text);
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
