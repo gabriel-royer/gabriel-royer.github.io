@@ -1,28 +1,5 @@
 // === script.js ===
 
-// Gestion du thème clair/sombre avec persistance
-function setTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
-}
-
-document.getElementById('theme-toggle').addEventListener('click', () => {
-  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  setTheme(newTheme);
-});
-
-// Au chargement de la page, appliquer le thème sauvegardé ou celui du système
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    setTheme(savedTheme);
-  } else {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(prefersDark ? 'dark' : 'light');
-  }
-});
-
 // Lazy loading des images avec IntersectionObserver
 const lazyImages = document.querySelectorAll('img[data-src]');
 const observer = new IntersectionObserver((entries, obs) => {
@@ -46,5 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if(url && img) {
       img.src = `https://image.thum.io/get/width/800/crop/600/${encodeURIComponent(url)}`;
     }
+  });
+});
+
+// Theme toggle
+const toggle = document.getElementById('theme-toggle');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme === 'dark' || (prefersDark && !currentTheme)) {
+  document.documentElement.setAttribute('data-theme', 'dark');
+}
+
+toggle.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+});
+
+// Slider scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector('.slider-track');
+  document.querySelector('.next').addEventListener('click', () => {
+    track.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+  document.querySelector('.prev').addEventListener('click', () => {
+    track.scrollBy({ left: -320, behavior: 'smooth' });
   });
 });

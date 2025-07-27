@@ -1,160 +1,110 @@
-/* === styles.css === */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
 
 :root {
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-accent: #4F46E5;
-  --color-muted: #666;
-  --color-bg-alt: #f9f9f9;
-  --color-border: #e5e7eb;
+  --bg: #fff;
+  --text: #111;
+  --accent: #3b82f6;
 }
 
 [data-theme="dark"] {
-  --color-bg: #121212;
-  --color-text: #f5f5f5;
-  --color-accent: #818CF8;
-  --color-muted: #bbb;
-  --color-bg-alt: #1e1e1e;
-  --color-border: #2c2c2c;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: var(--font-body);
-  scroll-behavior: smooth;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
-body {
-  line-height: 1.6;
+  --bg: #111;
+  --text: #f0f0f0;
+  --accent: #3b82f6;
 }
 
 .container {
   width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 0;
+  max-width: 1000px;
+  margin: auto;
 }
 
-header {
-  background: var(--color-bg-alt);
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--color-border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header, nav, footer {
+  padding: 1rem 0;
 }
 
-h1 {
-  font-size: 1.8rem;
-  font-weight: 800;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+h1, h2, h3 {
   font-weight: 600;
-}
-
-p {
-  color: var(--color-muted);
-  margin-bottom: 1rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--color-accent);
-}
-
-#theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--color-text);
-}
-
-#hero {
-  padding: 4rem 0;
-  text-align: center;
-  background-color: var(--color-bg-alt);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.hero-content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  padding: 0;
 }
 
 .cta {
   display: inline-block;
   margin-top: 1rem;
-  background: var(--color-accent);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
+  border-radius: 0.4rem;
 }
 
-.cta:hover {
-  background: #3730a3;
-}
-
-.skills-grid, .projects-grid {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.5rem;
+  padding-left: 1rem;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+}
+
+.project {
+  flex: 0 0 300px;
+  background: #f9f9f9;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.02);
 }
 
 .project img {
   width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
 }
 
-footer {
-  padding: 2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  background-color: var(--color-bg-alt);
-  border-top: 1px solid var(--color-border);
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.4rem;
-  }
-  h2 {
-    font-size: 1.25rem;
-  }
-  .cta {
-    padding: 0.5rem 1rem;
-  }
+.prev {
+  left: 0.5rem;
+}
+
+.next {
+  right: 0.5rem;
 }
