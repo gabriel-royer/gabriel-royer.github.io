@@ -176,6 +176,7 @@ body.dark-mode .project {
 
 .project h3 {
     margin: 0.5rem 0;
+    text-align: center;
 }
 
 .swiper {
