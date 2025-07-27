@@ -7,14 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Portfolio professionnel de Gaby – Développeur web, gestionnaire, formateur, aiguilleur du rail. Un parcours hybride, des projets concrets, des compétences solides.">
   <title>Portfolio Gaby</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
 </head>
 
 <body>
   <header>
     <div class="container">
-      <h1>Gaby – Développeur & Polyvalent Stratégique</h1>
+      <h1>Gaby – Développeur & Stratège Pluriel</h1>
       <button id="theme-toggle" aria-label="Basculer le thème clair/sombre">🌓</button>
     </div>
   </header>
@@ -29,6 +30,14 @@
   </nav>
 
   <main class="container">
+    <section id="hero">
+      <div class="hero-content">
+        <h2>Construire. Transmettre. Innover.</h2>
+        <p>Un professionnel hybride au service du concret et de la tech utile.</p>
+        <a href="#projects" class="cta">Découvrir mes projets</a>
+      </div>
+    </section>
+
     <section id="about">
       <h2>À propos</h2>
       <p>Professionnel curieux, rigoureux et passionné par l’apprentissage, j’ai construit un parcours atypique et riche. De la gestion de paie au développement web, de la mécanique moto à la formation professionnelle, jusqu’au métier d’aiguilleur du rail à la SNCF, je m’investis pleinement dans chaque domaine exploré. Aujourd’hui, je développe des projets concrets mêlant tech, organisation et pédagogie.</p>
@@ -37,42 +46,42 @@
     <section id="skills">
       <h2>Compétences</h2>
       <ul class="skills-grid">
-        <li>Développement web (HTML, CSS, JavaScript)</li>
-        <li>Python (automatisations, scripts, web)</li>
-        <li>Gestion de projet & formation professionnelle</li>
-        <li>Ressources humaines & gestion de paie</li>
-        <li>Autonomie, rigueur, résolution de problèmes</li>
-        <li>Adaptabilité, transmission, documentation</li>
+        <li><strong>Développement web</strong> (HTML, CSS, JavaScript)</li>
+        <li><strong>Python</strong> (automatisations, scripts, web)</li>
+        <li><strong>Formation & gestion de projet</strong></li>
+        <li><strong>Ressources humaines & gestion de paie</strong></li>
+        <li><strong>Adaptabilité & transmission</strong></li>
+        <li><strong>Résolution de problèmes & rigueur</strong></li>
       </ul>
     </section>
 
     <section id="projects">
       <h2>Projets</h2>
+      <div class="projects-grid">
+        <article class="project">
+          <h3>Application de gestion de budget</h3>
+          <img src="images/budget-app.png" alt="Capture d'écran de l'application de budget">
+          <p>Développée sur PythonAnywhere, cette application CRUD permet à l'utilisateur de gérer ses opérations bancaires par mois/année. Interface simple, données sécurisées, pensée pour un usage quotidien personnel.</p>
+        </article>
 
-      <article class="project">
-        <h3>Application de gestion de budget</h3>
-        <img src="images/budget-app.png" alt="Capture d'écran de l'application de budget">
-        <p>Développée sur PythonAnywhere, cette application CRUD permet à l'utilisateur de gérer ses opérations bancaires par mois/année. Interface simple, données sécurisées, pensée pour un usage quotidien personnel.</p>
-      </article>
+        <article class="project">
+          <h3>Site web du centre de formation APR2S</h3>
+          <img src="images/apr2s-site.png" alt="Capture d'écran du site APR2S">
+          <p>Création complète du site vitrine pour le centre de formation APR2S : présentation des offres, formulaire de contact, responsive design. Réalisé en HTML, CSS, JS (et PHP pour certaines fonctionnalités).</p>
+        </article>
 
-      <article class="project">
-        <h3>Site web du centre de formation APR2S</h3>
-        <img src="images/apr2s-site.png" alt="Capture d'écran du site APR2S">
-        <p>Création complète du site vitrine pour le centre de formation APR2S : présentation des offres, formulaire de contact, responsive design. Réalisé en HTML, CSS, JS (et PHP pour certaines fonctionnalités).</p>
-      </article>
+        <article class="project">
+          <h3>Projet RAME (Application SNCF)</h3>
+          <img src="images/rame-app.png" alt="Capture d'écran du prototype RAME">
+          <p>Application interne pensée pour simplifier et fluidifier les échanges métier à la SNCF (aiguillage). Présentée sur la plateforme Léonard, en cours d’étude. UX simple, vision orientée agents terrain.</p>
+        </article>
 
-      <article class="project">
-        <h3>Projet RAME (Application SNCF)</h3>
-        <img src="images/rame-app.png" alt="Capture d'écran du prototype RAME">
-        <p>Application interne pensée pour simplifier et fluidifier les échanges métier à la SNCF (aiguillage). Présentée sur la plateforme Léonard, en cours d’étude. UX simple, vision orientée agents terrain.</p>
-      </article>
-
-      <article class="project">
-        <h3>Internalisation de la paie – GEIQ</h3>
-        <img src="images/paie.png" alt="Graphique illustratif paie">
-        <p>Déploiement d’un process complet d’internalisation de la paie pour plusieurs entités (GEIQ BTP, Industrie, Interpro). Mise en place des outils, intégration des conventions, automatisations et formation interne.</p>
-      </article>
-
+        <article class="project">
+          <h3>Internalisation de la paie – GEIQ</h3>
+          <img src="images/paie.png" alt="Graphique illustratif paie">
+          <p>Déploiement d’un process complet d’internalisation de la paie pour plusieurs entités (GEIQ BTP, Industrie, Interpro). Mise en place des outils, intégration des conventions, automatisations et formation interne.</p>
+        </article>
+      </div>
     </section>
 
     <section id="contact">
