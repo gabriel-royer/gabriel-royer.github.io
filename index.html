@@ -4,97 +4,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Portfolio de Gaby - Développeur web et professionnel pluridisciplinaire">
-  <title>Gaby | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Portfolio professionnel de Gaby – Développeur web, gestionnaire, formateur, aiguilleur du rail. Un parcours hybride, des projets concrets, des compétences solides.">
+  <title>Portfolio Gaby</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
 
 <body>
-  <header class="header">
+  <header>
     <div class="container">
-      <h1 class="logo">Gaby</h1>
-      <nav class="nav">
-        <ul>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="themeToggle" aria-label="Changer le thème">🌓</button>
-      </nav>
+      <h1>Gaby – Développeur & Polyvalent Stratégique</h1>
+      <button id="theme-toggle" aria-label="Basculer le thème clair/sombre">🌓</button>
     </div>
   </header>
 
-  <main>
-    <section id="hero" class="hero">
-      <div class="container">
-        <h2>Généraliste expert, stratège polyvalent</h2>
-        <p>Développeur web, formateur, gestionnaire RH, artisan – un parcours riche, un objectif clair : créer de la valeur concrète.</p>
-      </div>
+  <nav>
+    <ul class="container">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section id="about">
+      <h2>À propos</h2>
+      <p>Professionnel curieux, rigoureux et passionné par l’apprentissage, j’ai construit un parcours atypique et riche. De la gestion de paie au développement web, de la mécanique moto à la formation professionnelle, jusqu’au métier d’aiguilleur du rail à la SNCF, je m’investis pleinement dans chaque domaine exploré. Aujourd’hui, je développe des projets concrets mêlant tech, organisation et pédagogie.</p>
     </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h3>À propos</h3>
-        <p>Professionnel curieux, rigoureux et passionné par l’apprentissage, j’ai construit un parcours atypique : gestion de paie, création d’un centre de formation, boulangerie, développement web, et actuellement aiguilleur du rail à la SNCF. J’aime résoudre des problèmes concrets, transmettre, et apprendre vite – sérieusement, même en autodidacte.</p>
-      </div>
+    <section id="skills">
+      <h2>Compétences</h2>
+      <ul class="skills-grid">
+        <li>Développement web (HTML, CSS, JavaScript)</li>
+        <li>Python (automatisations, scripts, web)</li>
+        <li>Gestion de projet & formation professionnelle</li>
+        <li>Ressources humaines & gestion de paie</li>
+        <li>Autonomie, rigueur, résolution de problèmes</li>
+        <li>Adaptabilité, transmission, documentation</li>
+      </ul>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h3>Projets</h3>
-        <ul class="project-list">
-          <li>
-            <h4>Application RAME</h4>
-            <p>Application interne dédiée à la remontée d’incidents techniques pour les agents SNCF. Création du concept, logique UX, début du développement en Python/Flask.</p>
-          </li>
-          <li>
-            <h4>Suivi budgétaire personnel</h4>
-            <p>Application web avec CRUD, historiques par mois/année, hébergée sur PythonAnywhere. Permet à un utilisateur de suivre ses opérations bancaires simplement.</p>
-          </li>
-          <li>
-            <h4>Création d’un centre de formation (APR2S)</h4>
-            <p>Conception du site vitrine, structuration de l’offre pédagogique, accompagnement de publics en reconversion. Gestion complète du back-office administratif et RH.</p>
-          </li>
-          <li>
-            <h4>Internalisation de la paie</h4>
-            <p>Refonte complète des process paie dans un GEIQ : outils, procédures, conventions collectives. Prise en main du logiciel de paie, adaptation multi-conventionnelle.</p>
-          </li>
-        </ul>
-      </div>
+    <section id="projects">
+      <h2>Projets</h2>
+
+      <article class="project">
+        <h3>Application de gestion de budget</h3>
+        <img src="images/budget-app.png" alt="Capture d'écran de l'application de budget">
+        <p>Développée sur PythonAnywhere, cette application CRUD permet à l'utilisateur de gérer ses opérations bancaires par mois/année. Interface simple, données sécurisées, pensée pour un usage quotidien personnel.</p>
+      </article>
+
+      <article class="project">
+        <h3>Site web du centre de formation APR2S</h3>
+        <img src="images/apr2s-site.png" alt="Capture d'écran du site APR2S">
+        <p>Création complète du site vitrine pour le centre de formation APR2S : présentation des offres, formulaire de contact, responsive design. Réalisé en HTML, CSS, JS (et PHP pour certaines fonctionnalités).</p>
+      </article>
+
+      <article class="project">
+        <h3>Projet RAME (Application SNCF)</h3>
+        <img src="images/rame-app.png" alt="Capture d'écran du prototype RAME">
+        <p>Application interne pensée pour simplifier et fluidifier les échanges métier à la SNCF (aiguillage). Présentée sur la plateforme Léonard, en cours d’étude. UX simple, vision orientée agents terrain.</p>
+      </article>
+
+      <article class="project">
+        <h3>Internalisation de la paie – GEIQ</h3>
+        <img src="images/paie.png" alt="Graphique illustratif paie">
+        <p>Déploiement d’un process complet d’internalisation de la paie pour plusieurs entités (GEIQ BTP, Industrie, Interpro). Mise en place des outils, intégration des conventions, automatisations et formation interne.</p>
+      </article>
+
     </section>
 
-    <section id="skills" class="section">
-      <div class="container">
-        <h3>Compétences</h3>
-        <ul class="skills-list">
-          <li>HTML / CSS / JavaScript (vanilla)</li>
-          <li>Python (Flask, automatisation)</li>
-          <li>Gestion de paie & RH</li>
-          <li>Création de contenu pédagogique</li>
-          <li>Gestion de projet & conduite du changement</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h3>Contact</h3>
-        <p>Intéressé par un échange ou une collaboration ? Contactez-moi via <a href="mailto:tonadresse@email.fr">mon mail</a> ou sur <a href="https://www.linkedin.com/in/tonprofil/" target="_blank">LinkedIn</a>.</p>
-      </div>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Vous souhaitez collaborer, me recommander ou en savoir plus sur mes projets ? N’hésitez pas à me contacter via <a href="mailto:adresse@email.com">adresse@email.com</a> ou sur <a href="https://www.linkedin.com/in/votreprofil">LinkedIn</a>.</p>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="container">
       <p>&copy; 2025 Gaby. Tous droits réservés.</p>
     </div>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark' || (prefersDark && !currentTheme)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    toggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+  </script>
 </body>
 
 </html>
