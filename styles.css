@@ -154,18 +154,6 @@ body.dark-mode .skills-grid li {
     background: #333;
 }
 
-.skills-grid > li:only-child,
-.skills-grid > li:last-child:nth-child(odd) {
-    justify-self: center;
-    grid-column: 1 / -1;
-}
-
-@media (max-width: 900px) and (min-width: 600px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .project {
     background: #fff;
     padding: 1rem;
