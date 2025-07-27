@@ -228,6 +228,8 @@ footer {
     line-height: 1.8;
 }
 
+/* Carousel */
+
 #tech-carousel {
     overflow: hidden;
     padding: 2rem 0;
@@ -262,6 +264,8 @@ footer {
 .carousel-item:hover {
     transform: scale(1.15);
 }
+
+/* Logos animation */
 
 @keyframes scrollLoop {
     0% {
