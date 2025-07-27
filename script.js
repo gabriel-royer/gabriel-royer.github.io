@@ -1,53 +1,47 @@
-// === script.js ===
+// Basculer le thème clair/sombre
+document.getElementById("theme-toggle").addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+});
 
-// Lazy loading des images avec IntersectionObserver
-const lazyImages = document.querySelectorAll('img[data-src]');
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-      obs.unobserve(img);
+// Appliquer le thème préféré au chargement
+window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
     }
-  });
 });
-lazyImages.forEach(img => observer.observe(img));
 
-// Génération dynamique des captures d’écran (à adapter selon ta solution)
-// Ici, on suppose que chaque projet a un attribut data-url et une image avec class .project-img
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.project').forEach(project => {
-    const url = project.dataset.url;
-    const img = project.querySelector('.project-img');
-    if(url && img) {
-      img.src = `https://image.thum.io/get/width/800/crop/600/${encodeURIComponent(url)}`;
+// Initialiser Swiper
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        },
+    },
+});
+
+// Rendre chaque carte cliquable si un lien est présent
+document.querySelectorAll(".project").forEach((project) => {
+    const url = project.getAttribute("data-url");
+    if (url) {
+        project.style.cursor = "pointer";
+        project.addEventListener("click", () => {
+            window.open(url, "_blank");
+        });
     }
-  });
-});
-
-// Theme toggle
-const toggle = document.getElementById('theme-toggle');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme === 'dark' || (prefersDark && !currentTheme)) {
-  document.documentElement.setAttribute('data-theme', 'dark');
-}
-
-toggle.addEventListener('click', () => {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  localStorage.setItem('theme', isDark ? 'light' : 'dark');
-});
-
-// Slider scroll
-document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector('.slider-track');
-  document.querySelector('.next').addEventListener('click', () => {
-    track.scrollBy({ left: 320, behavior: 'smooth' });
-  });
-  document.querySelector('.prev').addEventListener('click', () => {
-    track.scrollBy({ left: -320, behavior: 'smooth' });
-  });
 });
