@@ -1,100 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Royer | Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f9f9f9;
-        }
-
-        header {
-            background: #222;
-            color: #fff;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        h2 {
-            color: #222;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 0.5rem;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .project {
-            background: #f3f3f3;
-            padding: 1rem;
-            border-radius: 6px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
-        }
-
-        .project-title {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact {
-            margin-top: 2rem;
-        }
-
-        a {
-            color: #007acc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Portfolio de Gaby - Développeur web et professionnel pluridisciplinaire">
+  <title>Gaby | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Gabriel Royer</h1>
-        <p>Web Developer & Project Leader</p>
-        <p>Welcome to my portfolio! Here are some of the websites and projects I've worked on.</p>
-    </header>
-    <main>
-        <section>
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <div class="project-title">Project 1: Website Name</div>
-                    <p>Short description of the website or project. <a href="#">View project</a></p>
-                </div>
-                <div class="project">
-                    <div class="project-title">Project 2: Website Name</div>
-                    <p>Short description of the website or project. <a href="#">View project</a></p>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
-        </section>
-        <section class="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <!-- Add more contact info or a contact form if desired -->
-        </section>
-    </main>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Gaby</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle" aria-label="Changer le thème">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <h2>Généraliste expert, stratège polyvalent</h2>
+        <p>Développeur web, formateur, gestionnaire RH, artisan – un parcours riche, un objectif clair : créer de la valeur concrète.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h3>À propos</h3>
+        <p>Professionnel curieux, rigoureux et passionné par l’apprentissage, j’ai construit un parcours atypique : gestion de paie, création d’un centre de formation, boulangerie, développement web, et actuellement aiguilleur du rail à la SNCF. J’aime résoudre des problèmes concrets, transmettre, et apprendre vite – sérieusement, même en autodidacte.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h3>Projets</h3>
+        <ul class="project-list">
+          <li>
+            <h4>Application RAME</h4>
+            <p>Application interne dédiée à la remontée d’incidents techniques pour les agents SNCF. Création du concept, logique UX, début du développement en Python/Flask.</p>
+          </li>
+          <li>
+            <h4>Suivi budgétaire personnel</h4>
+            <p>Application web avec CRUD, historiques par mois/année, hébergée sur PythonAnywhere. Permet à un utilisateur de suivre ses opérations bancaires simplement.</p>
+          </li>
+          <li>
+            <h4>Création d’un centre de formation (APR2S)</h4>
+            <p>Conception du site vitrine, structuration de l’offre pédagogique, accompagnement de publics en reconversion. Gestion complète du back-office administratif et RH.</p>
+          </li>
+          <li>
+            <h4>Internalisation de la paie</h4>
+            <p>Refonte complète des process paie dans un GEIQ : outils, procédures, conventions collectives. Prise en main du logiciel de paie, adaptation multi-conventionnelle.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h3>Compétences</h3>
+        <ul class="skills-list">
+          <li>HTML / CSS / JavaScript (vanilla)</li>
+          <li>Python (Flask, automatisation)</li>
+          <li>Gestion de paie & RH</li>
+          <li>Création de contenu pédagogique</li>
+          <li>Gestion de projet & conduite du changement</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h3>Contact</h3>
+        <p>Intéressé par un échange ou une collaboration ? Contactez-moi via <a href="mailto:tonadresse@email.fr">mon mail</a> ou sur <a href="https://www.linkedin.com/in/tonprofil/" target="_blank">LinkedIn</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Gaby. Tous droits réservés.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
