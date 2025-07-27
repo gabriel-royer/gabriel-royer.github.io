@@ -51,10 +51,20 @@ document.querySelectorAll(".project").forEach((project) => {
 document.addEventListener('DOMContentLoaded', function () {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('nav');
+    const navLinks = nav ? nav.querySelectorAll('ul a') : [];
 
     if (burger && nav) {
         burger.addEventListener('click', function () {
-            nav.classList.toggle('open');
+            const isOpen = nav.classList.toggle('open');
+            burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 768 && nav.classList.contains('open')) {
+                    nav.classList.remove('open');
+                    burger.setAttribute('aria-expanded', 'false');
+                }
+            });
         });
     }
 });

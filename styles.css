@@ -236,7 +236,7 @@ footer {
 @media (max-width: 768px) {
     .burger {
         display: flex;
-        z-index: 1200; /* plus élevé pour être cliquable */
+        z-index: 1200;
     }
 
     nav ul {
@@ -250,10 +250,15 @@ footer {
         top: 100%;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
     }
 
     nav.open ul {
         display: flex;
+        opacity: 1;
+        pointer-events: auto;
     }
 
     nav ul li {
@@ -263,11 +268,6 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-}
 
 .about-content {
     max-width: 800px;
