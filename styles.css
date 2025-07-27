@@ -236,16 +236,18 @@ footer {
 @media (max-width: 768px) {
     .burger {
         display: flex;
+        z-index: 1200; /* plus élevé pour être cliquable */
     }
 
     nav ul {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 100vw;
+        left: 0;
+        right: 0;
         background: var(--color-primary);
         position: absolute;
         top: 100%;
-        left: 0;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         z-index: 1000;
     }
