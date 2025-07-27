@@ -171,25 +171,10 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Gaby. Tous droits réservés.</p>
+            <p>&copy; 2025 Gabriel Royer. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <script>
-        const toggle = document.getElementById('theme-toggle');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const currentTheme = localStorage.getItem('theme');
-
-        if (currentTheme === 'dark' || (prefersDark && !currentTheme)) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-
-        toggle.addEventListener('click', () => {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-            localStorage.setItem('theme', isDark ? 'light' : 'dark');
-        });
-    </script>
 </body>
 
 </html>
