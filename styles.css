@@ -236,7 +236,7 @@ footer {
 .carousel-track {
     display: flex;
     gap: 2rem;
-    animation: scrollLoop 20s linear infinite;
+    animation: scrollLoop 40s linear infinite;
     width: max-content;
 }
 
