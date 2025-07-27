@@ -8,12 +8,14 @@
     <meta name="description"
         content="Portfolio professionnel de Gaby – Développeur web, gestionnaire, responsable pédagogique, aiguilleur du rail. Un parcours hybride, des projets concrets, des compétences solides.">
     <title>Portfolio Gabriel</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap">
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
     <script defer src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 </head>
 
 <body>
@@ -243,7 +245,7 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>Vous souhaitez collaborer, me recommander ou en savoir plus sur mes projets ? N’hésitez pas à me
-            contacter via <a href="https://github.com/gabriel-royer" target="_blank">
+            contacter via <a href="https://github.com/gabriel-royer" target="_blank" aria-label="Mon profil GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50"
                     style="vertical-align:middle; margin-right:4px;">
                     <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39
@@ -260,7 +262,7 @@
                         C2,35.164,8.63,43.804,17.791,46.836z">
                     </path>
                 </svg>
-            </a> ou sur <a href="https://www.linkedin.com/in/gabriel-royer-a29b57375" target="_blank"><svg
+            </a> ou sur <a href="https://www.linkedin.com/in/gabriel-royer-a29b57375" target="_blank" aria-label="Mon profil LinkedIn"><svg
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"
                     style="vertical-align:middle; margin-right:4px;">
                     <path fill="#0288D1"
