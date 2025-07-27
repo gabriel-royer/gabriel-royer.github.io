@@ -250,6 +250,10 @@ footer {
         z-index: 1200;
     }
 
+    header {
+    position: initial;
+}
+
     nav ul {
         display: none;
         flex-direction: column;
