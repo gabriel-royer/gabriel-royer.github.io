@@ -249,7 +249,7 @@ footer {
         position: initial;
     }
 
-    nav ul {
+    nav#main-navigation ul {
         display: none;
         flex-direction: column;
         width: 100vw;
@@ -266,13 +266,13 @@ footer {
         transition: opacity 0.3s;
     }
 
-    nav.open ul {
+    nav#main-navigation.open ul {
         display: flex;
         opacity: 1;
         pointer-events: auto;
     }
 
-    nav ul li {
+    nav#main-navigation ul li {
         margin: 1rem 0;
         text-align: center;
     }
