@@ -68,3 +68,34 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// Script pour la redirection automatique en fonction de la langue
+(function () {
+    const currentPath = window.location.pathname;
+    const currentLang = currentPath.includes('index-en') ? 'en' : 'fr';
+    const storedLang = localStorage.getItem('lang');
+    const browserLang = navigator.language || navigator.userLanguage;
+    const preferredLang = storedLang || browserLang;
+
+    // Automattic redirection based on language preference
+    if (preferredLang.startsWith('en') && currentLang !== 'en') {
+        window.location.href = 'index-en.html';
+    } else if (preferredLang.startsWith('fr') && currentLang !== 'fr') {
+        window.location.href = 'index.html';
+    }
+
+    // Langue switcher loading
+    document.addEventListener('DOMContentLoaded', function () {
+        const langLinks = document.querySelectorAll('a[hreflang]');
+
+        langLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                const chosenLang = link.getAttribute('hreflang');
+                if (chosenLang) {
+                    localStorage.setItem('lang', chosenLang);
+                }
+                // No redirection needed
+            });
+        });
+    });
+})();
