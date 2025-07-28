@@ -102,11 +102,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-nav#language-navigation {
-    color: var(--color-text);
-    background-color: var(--color-bg);
-}
-
 #hero {
     background: var(--color-hero-bg, #f5f7fa);
     color: var(--color-text);
