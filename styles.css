@@ -16,8 +16,9 @@ body.dark-mode {
     --color-hero-bg: #1e1e1e;
 }
 
-body.dark-mode .hero-content .subtitle {
-    color: #ccc;/
+body.dark-mode .hero-content .subtitle,
+body.dark-mode .case-study-header .subtitle {
+    color: #ccc;
 }
 
 body {
@@ -110,7 +111,8 @@ nav a:hover {
     border-bottom: 1px solid #ddd;
 }
 
-.hero-content .subtitle {
+.hero-content .subtitle,
+.case-study-header .subtitle {
     font-size: 1.25rem;
     max-width: 700px;
     margin: 0 auto 2rem;
@@ -370,7 +372,8 @@ body.dark-mode .carousel-item {
 .case-study-header {
     text-align: center;
     padding: 4rem 1rem;
-    background-color: #f0f4f8;
+    background: var(--color-hero-bg);
+    color: var(--color-text);
 }
 
 .case-study-header h1 {
