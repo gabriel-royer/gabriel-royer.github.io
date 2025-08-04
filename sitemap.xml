@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Pages principales -->
   <url>
-    <loc>https://gabriel-royer.github.io/</loc>
+    <loc>https://gabriel-royer.github.io/index.html</loc>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://gabriel-royer.github.io/#about</loc>
+    <loc>https://gabriel-royer.github.io/index-en.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Études de cas en Français -->
+  <url>
+    <loc>https://gabriel-royer.github.io/case-study-apr2s.html</loc>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://gabriel-royer.github.io/#skills</loc>
+    <loc>https://gabriel-royer.github.io/case-study-alundi.html</loc>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://gabriel-royer.github.io/#projects</loc>
+    <loc>https://gabriel-royer.github.io/case-study-sncf.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Études de cas en Anglais -->
+  <url>
+    <loc>https://gabriel-royer.github.io/case-study-apr2s-en.html</loc>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://gabriel-royer.github.io/#contact</loc>
+    <loc>https://gabriel-royer.github.io/case-study-alundi-en.html</loc>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://gabriel-royer.github.io/html-en.html</loc>
+    <loc>https://gabriel-royer.github.io/case-study-sncf-en.html</loc>
+    <priority>0.70</priority>
   </url>
+
 </urlset>
