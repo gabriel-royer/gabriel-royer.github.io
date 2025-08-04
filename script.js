@@ -12,40 +12,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Initialiser Swiper
-const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-        },
-        1024: {
-            slidesPerView: 3,
-        },
-    },
-});
-
-// Rendre chaque carte cliquable si un lien est présent
-document.querySelectorAll(".project").forEach((project) => {
-    const url = project.getAttribute("data-url");
-    if (url) {
-        project.style.cursor = "pointer";
-        project.addEventListener("click", () => {
-            window.open(url, "_blank");
-        });
-    }
-});
-
 // Script pour le menu burger responsive
 
 document.addEventListener('DOMContentLoaded', function () {

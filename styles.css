@@ -356,7 +356,6 @@ body.dark-mode .carousel-item {
     display: inline-block;
     padding: 0.6rem 1.2rem;
     background-color: #007bff;
-    /* Couleur primaire, à adapter à votre thème */
     color: white;
     border-radius: 5px;
     font-weight: 600;
@@ -366,5 +365,68 @@ body.dark-mode .carousel-item {
 
 .project-card-link:hover .cta-button {
     background-color: #0056b3;
-    /* Couleur au survol */
+}
+
+.case-study-header {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #f0f4f8;
+}
+
+.case-study-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.case-study-content {
+    padding: 2rem 0;
+}
+
+.case-study-section {
+    margin-bottom: 2.5rem;
+}
+
+.case-study-section h2 {
+    text-align: left;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.results-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.results-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.results-list li::before {
+    content: '✅';
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.case-study-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
