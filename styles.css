@@ -427,7 +427,7 @@ body.dark-mode .carousel-item {
 
 .case-study-image {
     width: 100%;
-    max-width: 800px;
+    max-width: 400px;
     margin: 2rem auto;
     display: block;
     border-radius: 8px;
